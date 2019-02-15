@@ -10,15 +10,16 @@ namespace csharpdemo
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine(Add(10, 20));
-            //Console.WriteLine(Multiply(10, 20));
-            //Console.WriteLine(Multiply(20));  // 40
-            //Console.WriteLine(Multiply());    // 20
-            //Console.WriteLine(Multiply(n2:10));    // 20
-
             int n = 10;
+            int[] arr = new int[10];
+
             Change(ref n);
             Console.WriteLine(n);  // ??
+
+            Fill(arr,1);            //  Fill array with 1s
+            Fill(arr,1,5);          //  Fill only first 5 elements with 1
+            Fill(arr);              //  Fill whole array with 0s 
+            Fill(arr, size: 5);     //  Fill first 5 elements with 0s
         }
 
         static void Change(ref int v)
@@ -29,6 +30,16 @@ namespace csharpdemo
         {
             return n1 + n2;
         }
+
+        static void Fill(int [] a, int value = 0, int size = -1)
+        {
+            if (size == -1)
+                size = a.Length;
+
+            for (int i = 0; i < size; i++)
+                a[i] = value; 
+        }
+
 
         static int Multiply(int n1 = 10 ,int n2 = 2)
         {

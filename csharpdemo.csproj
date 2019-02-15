@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>csharpdemo.FunDemo</StartupObject>
+    <StartupObject>csharpdemo.TestEmployee</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,12 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayDemo.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Factors.cs" />
     <Compile Include="FunDemo.cs" />
     <Compile Include="LeapYear.cs" />
     <Compile Include="MonthDays.cs" />
     <Compile Include="Numbers.cs" />
+    <Compile Include="OutDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VarParamDemo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

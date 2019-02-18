@@ -15,7 +15,7 @@ namespace csharpdemo
         private static int hraper = 30;
         public static int GetHraper()
         {
-            return hraper; 
+            return hraper;
         }
         //Constructor 
         public Employee(int id, string name, int salary)
@@ -49,19 +49,29 @@ namespace csharpdemo
         {
             this.salary += amount;
         }
-    }
 
-    class TestEmployee
-    {
-        static void Main(string[] args)
+        public string Fullname
         {
-            Employee e1 = new Employee(1,"Mr. Bill",50000);  // Instance or Object 
-            Employee e2 = new Employee(2, "Mr. Bill", 50000);
-            e1.Hike(10000);
-            Console.WriteLine(e1.GetNetSalary());
-            Console.WriteLine(Employee.GetHraper());  // Static method 
-            
+            get
+            {
+                return this.name;
+            }
+            set
+            {
+                if (value != null && value.Length > 0)
+                    this.name = value;
+            }
+        }
+
+    }
+        class TestEmployee
+        {
+            static void Main(string[] args)
+            {
+                Employee e1 = new Employee(1, "Mr. Bill", 50000);  // Instance or Object 
+                e1.Fullname = "Gates";
+                e1.Print();
+            }
+
         }
     }
-
-}

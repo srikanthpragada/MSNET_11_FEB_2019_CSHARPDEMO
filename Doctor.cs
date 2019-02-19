@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharpdemo
 {
-    class Doctor
+    abstract class Doctor
     {
         private string name, dept;
         public Doctor(string name, string dept)
@@ -19,6 +19,8 @@ namespace csharpdemo
             Console.WriteLine(this.name);
             Console.WriteLine(this.dept);
         }
+
+        public abstract int GetSalary();
     }
 
     class Resident : Doctor 
@@ -34,7 +36,7 @@ namespace csharpdemo
             Console.WriteLine(this.salary);
         }
 
-        public int GetSalary()
+        public override int GetSalary()
         {
             return this.salary; 
         }
@@ -56,7 +58,7 @@ namespace csharpdemo
             Console.WriteLine(this.charge);
         }
 
-        public int GetSalary()
+        public override int GetSalary()
         {
             return this.visits * this.charge;
         }
@@ -68,6 +70,7 @@ namespace csharpdemo
         {
             Doctor d = new Resident("Dr. Joe", "Card", 400000);
             d.Print();  // Runtime Polymorphism 
+            Console.WriteLine(d.GetSalary());  // Runtime Polymorphsim
             d = new Consultant("Dr. Adam", "Ped", 10, 1000);
             d.Print();  // Runtime Polymorphism 
         }

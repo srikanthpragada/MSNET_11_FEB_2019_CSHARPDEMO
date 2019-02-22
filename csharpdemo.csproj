@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>csharpdemo.WriteMobileNumbers</StartupObject>
+    <StartupObject>csharpdemo.AverageOfNumbers</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayDemo.cs" />
+    <Compile Include="AverageOfNumbers.cs" />
     <Compile Include="DatesDemo.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="Employee.cs" />

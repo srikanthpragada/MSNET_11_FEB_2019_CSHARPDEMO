@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>csharpdemo.AverageOfNumbers</StartupObject>
+    <StartupObject>csharpdemo.DelegateDemo</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,9 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvFeatures.cs" />
     <Compile Include="ArrayDemo.cs" />
     <Compile Include="AverageOfNumbers.cs" />
     <Compile Include="DatesDemo.cs" />
+    <Compile Include="DelegateDemo.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Factors.cs" />

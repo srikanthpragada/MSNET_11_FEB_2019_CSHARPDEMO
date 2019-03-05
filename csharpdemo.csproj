@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>csharpdemo.DelegateDemo</StartupObject>
+    <StartupObject>csharpdemo.WordFrequency</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -63,8 +63,11 @@
     <Compile Include="OutDemo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SortMobileNumbers.cs" />
+    <Compile Include="Stack.cs" />
     <Compile Include="StringDemo.cs" />
     <Compile Include="VarParamDemo.cs" />
+    <Compile Include="WordFrequency.cs" />
     <Compile Include="WriteMobileNumbers.cs" />
   </ItemGroup>
   <ItemGroup>

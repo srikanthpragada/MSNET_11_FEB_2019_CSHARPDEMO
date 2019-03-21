@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace csharpdemo
 {
+    // Basic operations related to an Entity 
     public class ManipulateCourse
     {
         static void Main(string[] args)

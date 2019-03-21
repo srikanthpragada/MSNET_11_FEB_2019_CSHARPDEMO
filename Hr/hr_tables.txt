@@ -1,0 +1,23 @@
+﻿create table Departments
+(Id        int identity(1,1) primary key,
+ DeptName  varchar(50)
+);
+
+create table Employees
+(Id        int identity(100,1) primary key,
+ EmpName   varchar(50),
+ Salary    int,
+ Dept      int references Departments(Id)
+);
+
+insert into departments(deptname) values('Production');
+insert into departments(deptname) values('Sales');
+insert into departments(deptname) values('IT');
+
+select * from departments
+
+insert into employees(empname,salary,dept) values('Bill',10000,1);
+insert into employees(empname,salary,dept) values('Steve',20000,2);
+insert into employees(empname,salary,dept) values('Joe',15000,3);
+insert into employees(empname,salary,dept) values('James',16000,2);
+

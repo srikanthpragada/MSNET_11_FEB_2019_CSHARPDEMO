@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>csharpdemo.Hr.Test</StartupObject>
+    <StartupObject>csharpdemo.CF.Test</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -61,6 +61,10 @@
     <Compile Include="ArrayDemo.cs" />
     <Compile Include="AverageOfNumbers.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="CF\BooksContext.cs" />
+    <Compile Include="CF\Publisher.cs" />
+    <Compile Include="CF\Test.cs" />
+    <Compile Include="CF\Title.cs" />
     <Compile Include="Course.cs">
       <DependentUpon>Training.tt</DependentUpon>
     </Compile>
@@ -97,6 +101,11 @@
     <Compile Include="LifeCycleDemo.cs" />
     <Compile Include="ListNames.cs" />
     <Compile Include="ManipulateCourse.cs" />
+    <Compile Include="Migrations\201903220342121_Books Model.cs" />
+    <Compile Include="Migrations\201903220342121_Books Model.Designer.cs">
+      <DependentUpon>201903220342121_Books Model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MonthDays.cs" />
     <Compile Include="MyTime.cs" />
     <Compile Include="Numbers.cs" />
@@ -171,6 +180,11 @@
       <DependentUpon>Training.edmx</DependentUpon>
       <LastGenOutput>Training.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201903220342121_Books Model.resx">
+      <DependentUpon>201903220342121_Books Model.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

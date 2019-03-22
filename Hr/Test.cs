@@ -13,10 +13,29 @@ namespace csharpdemo.Hr
             HRContext ctx = new HRContext();
             ctx.Database.Log = Console.WriteLine;
 
-            foreach(var e in ctx.Employees)
-            {
-                Console.WriteLine($"{e.EmpName} - {e.Salary} - {e.Department.DeptName}");
-            }
+            //foreach(var e in ctx.Employees.Include("Department"))
+            //{
+            //    Console.WriteLine(e.GetType().Name);
+            //    Console.WriteLine($"{e.EmpName} - {e.Salary} - {e.Department.DeptName}");
+            //}
+
+            var depts = from d in ctx.Departments
+                        where d.Employees.Count() > 1
+                        select d;
+
+            foreach (var d in depts)
+                Console.WriteLine(d.DeptName);
+
+
+            //foreach (var d in ctx.Departments)
+            //{
+            //    Console.WriteLine($"{d.DeptName}");
+            //    Console.WriteLine("----------------");
+            //    foreach (var e in d.Employees)
+            //    {
+            //        Console.WriteLine(e.EmpName);
+            //    }
+            //}
         }
     }
 
